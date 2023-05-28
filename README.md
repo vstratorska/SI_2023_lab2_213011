@@ -34,7 +34,8 @@ Test case3) F || F || T user=new User("Viktorija", "pass12345", null) user.getPa
 Test case4) F || F || F user=new User("Viktorija", "pass12345*", "viktorija.stra@gmail.com") user.getPassword()=pass12345* user.getEmail()=viktorija.stra@gmail.com Доколку постојат user, user.getPassword() и user.getEmail() тогаш барањето во if не е исполнето.
 
 
-Објаснување на напишаните unit tests
+Објаснување на напишаните unit tests 
+
 Со напишаните unit тестови ги тестираме горенаведените случаи преку две функции. Во првата функција ги тестираме петте тест случаи од критериумот Every branch. Во првиот случај
 очекуваме исклучок па затоа тестираме со помош на assert изразите assertThrows() и assertTrue(). Доколку при извршување на програмата ја добиеме пораката "Mandatory information missing!" 
 тогаш тестот ни поминува точно. Во сите други случаи функцијата function треба да ни врати false (терминира во јазлите 19, 23 и 25 каде во јазел 23 проверува дали same == 0, а бидејќи во
